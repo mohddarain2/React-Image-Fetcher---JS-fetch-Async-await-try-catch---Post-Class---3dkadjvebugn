@@ -32,7 +32,7 @@ const App = () => {
         <>
             Id number <input type="number" onChange={updateInput} />
             {(loading) && <Loader />}
-            {(Object.keys(image).length > 0) && <PhotoFrame url={image.url} title={image.title} />
+            {(Object.keys(image).length > 0 && !loading) && <PhotoFrame url={image.url} title={image.title} />
             }
         </>
     )
